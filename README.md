@@ -5,9 +5,6 @@
 - [Contents](#contents)
 - [開発環境](#開発環境)
 - [デザイン](#デザイン)
-- [Gitルール](#gitルール)
-  - [ブランチ](#ブランチ)
-  - [コミットメッセージ](#コミットメッセージ)
 - [フォルダ構成(/lib)](#フォルダ構成lib)
 
 ## 開発環境
@@ -20,20 +17,7 @@
 
 ## デザイン
 
-[仮デザイン Canva](https://www.canva.com/design/DAGMej9L4ds/AmDj4GhkiIp_fvC_WTEKmg/edit?utm_content=DAGMej9L4ds&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
-### コミットメッセージ
-
-- feat: A new feature
-- fix: A bug fix
-- docs: Documentation only changes 
-- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- refactor: A code change that neither fixes a bug nor adds a feature
-- perf: A code change that improves performance
-- test: Adding missing or correcting existing tests
-- chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
-
-[参考](https://qiita.com/konatsu_p/items/dfe199ebe3a7d2010b3e)
+[仮デザイン Canva](https://www.canva.com/design/DAGMej9L4ds/AmDj4GhkiIp_fvC_WTEKmg/edit?utm_content=DAGMej9L4ds&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)S
 
 ## フォルダ構成(/lib)
 
