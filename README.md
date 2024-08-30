@@ -22,23 +22,6 @@
 
 [仮デザイン Canva](https://www.canva.com/design/DAGMej9L4ds/AmDj4GhkiIp_fvC_WTEKmg/edit?utm_content=DAGMej9L4ds&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-## Gitルール
-
-### ブランチ
-
-- main
-  - 本番環境
-  - マージのみ
-- develop
-  - 開発の主軸
-  - featureの派生元
-  - マージのみ
-- feature
-  - 機能の追加や変更
-  - 基本このブランチで作業
-- release
-  - 検証環境
-
 ### コミットメッセージ
 
 - feat: A new feature
