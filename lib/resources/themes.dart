@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'colors.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mk_portfolio/resources/colors.dart';
 
 class AppThemes {
   static final ThemeData theme = ThemeData(
@@ -15,5 +16,6 @@ class AppThemes {
       surface: AppColors.surfaceColor,
       onSurface: AppColors.backgroundColor,
     ),
+    textTheme: GoogleFonts.firaCodeTextTheme(),
   );
 }
