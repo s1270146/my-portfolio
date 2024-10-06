@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mk_portfolio/constants.dart';
 import 'package:mk_portfolio/resources/colors.dart';
 import 'package:mk_portfolio/src/widget/command_text.dart';
+import 'package:seo/seo.dart';
 
 class CommandTitle extends StatelessWidget {
   const CommandTitle({
@@ -25,11 +26,15 @@ class CommandTitle extends StatelessWidget {
           CommandText(
             text: "pwd",
           ),
-          Text(
-            "/$text",
-            style: TextStyle(
-              fontSize: fontSize,
-              color: AppColors.primaryColor,
+          Seo.text(
+            text: text,
+            style: TextTagStyle.h2,
+            child: Text(
+              "/$text",
+              style: TextStyle(
+                fontSize: fontSize,
+                color: AppColors.primaryColor,
+              ),
             ),
           ),
         ],
