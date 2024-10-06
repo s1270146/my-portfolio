@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:mk_portfolio/constants.dart';
 import 'package:mk_portfolio/resources/colors.dart';
 import 'package:mk_portfolio/src/controllers/provider.dart';
 import 'package:mk_portfolio/src/widget/command_text.dart';
@@ -9,6 +10,9 @@ class Sidebar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize =
+        screenWidth > responsiveWidth ? screenWidth * 0.02 : screenWidth * 0.05;
     final pageController = ref.watch(pageControllerProvider);
     return Container(
       color: AppColors.backgroundColor,
@@ -19,16 +23,16 @@ class Sidebar extends ConsumerWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             CommandText(
               text: "tree",
-              fontSize: 24,
             ),
             Text(
               "/",
               style: TextStyle(
                 color: AppColors.primaryColor,
-                fontSize: 24,
+                fontSize: fontSize,
               ),
             ),
             Row(
@@ -37,7 +41,7 @@ class Sidebar extends ConsumerWidget {
                   "├──",
                   style: TextStyle(
                     color: AppColors.primaryColor,
-                    fontSize: 24,
+                    fontSize: fontSize,
                   ),
                 ),
                 TextButton(
@@ -47,12 +51,15 @@ class Sidebar extends ConsumerWidget {
                       duration: Duration(milliseconds: 500),
                       curve: Curves.easeInOut,
                     );
+                    if (screenWidth < responsiveWidth) {
+                      Navigator.of(context).pop();
+                    }
                   },
                   child: Text(
                     "Profile",
                     style: TextStyle(
                       color: AppColors.primaryColor,
-                      fontSize: 24,
+                      fontSize: fontSize,
                     ),
                   ),
                 ),
@@ -64,7 +71,7 @@ class Sidebar extends ConsumerWidget {
                   "├──",
                   style: TextStyle(
                     color: AppColors.primaryColor,
-                    fontSize: 24,
+                    fontSize: fontSize,
                   ),
                 ),
                 TextButton(
@@ -74,12 +81,15 @@ class Sidebar extends ConsumerWidget {
                       duration: Duration(milliseconds: 500),
                       curve: Curves.easeInOut,
                     );
+                    if (screenWidth < responsiveWidth) {
+                      Navigator.of(context).pop();
+                    }
                   },
                   child: Text(
                     "Skills",
                     style: TextStyle(
                       color: AppColors.primaryColor,
-                      fontSize: 24,
+                      fontSize: fontSize,
                     ),
                   ),
                 ),
@@ -91,7 +101,7 @@ class Sidebar extends ConsumerWidget {
                   "├──",
                   style: TextStyle(
                     color: AppColors.primaryColor,
-                    fontSize: 24,
+                    fontSize: fontSize,
                   ),
                 ),
                 TextButton(
@@ -101,12 +111,15 @@ class Sidebar extends ConsumerWidget {
                       duration: Duration(milliseconds: 500),
                       curve: Curves.easeInOut,
                     );
+                    if (screenWidth < responsiveWidth) {
+                      Navigator.of(context).pop();
+                    }
                   },
                   child: Text(
                     "Works",
                     style: TextStyle(
                       color: AppColors.primaryColor,
-                      fontSize: 24,
+                      fontSize: fontSize,
                     ),
                   ),
                 ),
@@ -118,7 +131,7 @@ class Sidebar extends ConsumerWidget {
                   "└──",
                   style: TextStyle(
                     color: AppColors.primaryColor,
-                    fontSize: 24,
+                    fontSize: fontSize,
                   ),
                 ),
                 TextButton(
@@ -128,12 +141,15 @@ class Sidebar extends ConsumerWidget {
                       duration: Duration(milliseconds: 500),
                       curve: Curves.easeInOut,
                     );
+                    if (screenWidth < responsiveWidth) {
+                      Navigator.of(context).pop();
+                    }
                   },
                   child: Text(
                     "Blog",
                     style: TextStyle(
                       color: AppColors.primaryColor,
-                      fontSize: 24,
+                      fontSize: fontSize,
                     ),
                   ),
                 ),

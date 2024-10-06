@@ -14,6 +14,10 @@ class BlogView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize =
+        screenWidth > 750 ? screenWidth * 0.025 : screenWidth * 0.04;
+    double space = screenWidth * 0.01;
     final blog = ref.watch(fetchBlogProvider);
     return Padding(
       padding: const EdgeInsets.all(20),
@@ -22,6 +26,28 @@ class BlogView extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CommandTitle(text: "Blog"),
+            Row(
+              children: [
+                CommandText(text: "curl"),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: space,
+                  ),
+                  child: TextButton(
+                    onPressed: () async {
+                      await jumpToUrl(_myBlogUrl);
+                    },
+                    child: Text(
+                      _myBlogUrl,
+                      style: TextStyle(
+                        fontSize: fontSize,
+                        color: AppColors.primaryColor,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
             blog.when(
               data: (items) => Wrap(
                 spacing: 60,
@@ -37,28 +63,6 @@ class BlogView extends ConsumerWidget {
               loading: () => Center(child: CircularProgressIndicator()),
               error: (error, stack) => Center(child: Text('Error: $error')),
             ),
-            Row(
-              children: [
-                CommandText(text: "curl"),
-                Container(
-                  margin: const EdgeInsets.only(
-                    left: 15.0,
-                  ),
-                  child: TextButton(
-                    onPressed: () async {
-                      await jumpToUrl(_myBlogUrl);
-                    },
-                    child: Text(
-                      _myBlogUrl,
-                      style: TextStyle(
-                        fontSize: 36,
-                        color: AppColors.primaryColor,
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            )
           ],
         ),
       ),

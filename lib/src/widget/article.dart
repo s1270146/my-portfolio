@@ -16,6 +16,11 @@ class Article extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize =
+        screenWidth > 750 ? screenWidth * 0.015 : screenWidth * 0.04;
+    double width = screenWidth > 750 ? screenWidth * 0.20 : screenWidth * 0.6;
+    double height = width * 4 / 3;
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
@@ -28,14 +33,14 @@ class Article extends StatelessWidget {
             color: AppColors.primaryColor,
             borderRadius: BorderRadius.circular(30),
           ),
-          width: 300,
-          height: 400,
+          width: width,
+          height: height,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(
-                width: 300,
-                height: 200,
+                width: width,
+                height: height / 2,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30),
                   child: Image.network(
@@ -64,14 +69,14 @@ class Article extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 200,
+                height: height / 2,
                 child: Padding(
                   padding: const EdgeInsets.all(15),
                   child: Center(
                     child: Text(
                       title,
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: fontSize,
                       ),
                     ),
                   ),
