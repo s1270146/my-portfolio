@@ -1,11 +1,11 @@
 {
-    "name": "mk_portfolio",
-    "short_name": "mk_portfolio",
+    "name": "Koyo Mori",
+    "short_name": "MK",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0f0f0f",
+    "theme_color": "#00f0f0f",
+    "description": "Koyo Mori portfolio.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
