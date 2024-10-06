@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mk_portfolio/constants.dart';
 import 'package:mk_portfolio/resources/colors.dart';
 
 class CommandText extends StatelessWidget {
@@ -6,20 +7,22 @@ class CommandText extends StatelessWidget {
     super.key,
     required this.text,
     this.color,
-    this.fontSize,
   });
 
   final String text;
   final Color? color;
-  final double? fontSize;
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize = (screenWidth > responsiveWidth)
+        ? screenWidth * 0.025
+        : screenWidth * 0.045;
     return Text(
       "└──╼ \$ $text",
       style: TextStyle(
         color: color ?? AppColors.primaryColor,
-        fontSize: fontSize ?? 36,
+        fontSize: fontSize,
       ),
     );
   }

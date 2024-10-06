@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mk_portfolio/constants.dart';
 import 'package:mk_portfolio/src/utils/url.dart';
 
 class AccountImage extends StatelessWidget {
@@ -13,6 +14,8 @@ class AccountImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double width = screenWidth > responsiveWidth ? 40 : 25;
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
@@ -23,8 +26,8 @@ class AccountImage extends StatelessWidget {
           color: Colors.white,
           child: Image.asset(
             imagePath,
-            width: 40.0,
-            height: 40.0,
+            width: width,
+            height: width,
             fit: BoxFit.cover,
           ),
         ),

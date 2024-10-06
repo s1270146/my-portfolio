@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mk_portfolio/constants.dart';
 import 'package:mk_portfolio/resources/colors.dart';
 import 'package:mk_portfolio/src/widget/command_text.dart';
 import 'package:mk_portfolio/src/widget/command_title.dart';
@@ -8,6 +9,10 @@ class SkillsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    double fontSize = screenWidth > responsiveWidth
+        ? screenWidth * 0.020
+        : screenWidth * 0.045;
     return Padding(
       padding: EdgeInsets.only(
         top: 20,
@@ -31,42 +36,42 @@ class SkillsView extends StatelessWidget {
                       Text(
                         "Dart",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "TypeScript",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "Python",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "Go",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "Java",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "C++",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
@@ -88,28 +93,28 @@ class SkillsView extends StatelessWidget {
                       Text(
                         "Flutter",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "Next.js",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "React",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "Gin",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
@@ -131,28 +136,28 @@ class SkillsView extends StatelessWidget {
                       Text(
                         "'Google Cloud'",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "AWS",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "Azure",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
                       Text(
                         "PostgreSQL",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       ),
@@ -172,14 +177,14 @@ class SkillsView extends StatelessWidget {
                       Text(
                         "2022 Dec ",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.primaryColor,
                         ),
                       ),
                       Text(
                         "応用情報技術者試験",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       )
@@ -190,14 +195,14 @@ class SkillsView extends StatelessWidget {
                       Text(
                         "2023 Jun ",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.primaryColor,
                         ),
                       ),
                       Text(
                         "情報処理安全確保支援士(未登録)",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       )
@@ -208,14 +213,14 @@ class SkillsView extends StatelessWidget {
                       Text(
                         "2024 Jun ",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.primaryColor,
                         ),
                       ),
                       Text(
                         "ネットワークスペシャリスト",
                         style: TextStyle(
-                          fontSize: 36,
+                          fontSize: fontSize,
                           color: AppColors.secondColor,
                         ),
                       )
