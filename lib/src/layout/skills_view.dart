@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mk_portfolio/resources/colors.dart';
 import 'package:mk_portfolio/src/widget/command_text.dart';
+import 'package:mk_portfolio/src/widget/command_title.dart';
 
 class SkillsView extends StatelessWidget {
   const SkillsView({super.key});
@@ -16,33 +17,7 @@ class SkillsView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              margin: const EdgeInsets.only(bottom: 50.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CommandText(text: "pwd"),
-                  Row(
-                    children: [
-                      Text(
-                        "/",
-                        style: TextStyle(
-                          fontSize: 36,
-                          color: AppColors.secondColor,
-                        ),
-                      ),
-                      Text(
-                        "Skills",
-                        style: TextStyle(
-                          fontSize: 36,
-                          color: AppColors.secondColor,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            CommandTitle(text: "Skills"),
             Container(
               margin: const EdgeInsets.only(bottom: 50.0),
               child: Column(

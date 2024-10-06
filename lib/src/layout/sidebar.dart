@@ -13,10 +13,12 @@ class Sidebar extends ConsumerWidget {
     return Container(
       color: AppColors.backgroundColor,
       child: Padding(
-        padding: EdgeInsets.all(12.0),
+        padding: EdgeInsets.only(
+          left: 12.0,
+          top: 20.0,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CommandText(
               text: "tree",
